@@ -1,8 +1,9 @@
-import knex from 'knex'
+import knex, {Knex} from 'knex'
 import {DbConfig, DBModel} from "../../interfaces/dbConfig";
 
 export class KnexClient {
-    private readonly _client;
+    private readonly _client: Knex;
+
     constructor(config: DbConfig) {
         this._client = knex({
             client: 'pg',
@@ -16,7 +17,6 @@ export class KnexClient {
             }
         });
     }
-
 
     public client() {
         return this._client;

@@ -1,3 +1,5 @@
+import {UserRepo} from "../repositories/user.repo";
+
 export interface DbConfig {
     user: string,
     password: string,
@@ -6,7 +8,10 @@ export interface DbConfig {
     database: string,
     ssl: boolean
 }
-
 export interface DBModel {
     [key: string]: any
+}
+
+export enum DBRepos {
+    USER_REPO = "user"
 }

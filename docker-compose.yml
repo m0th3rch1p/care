@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: "care_pg"
+    image: postgres:16-alpine
+    restart: on-failure
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: virtu_care
+      POSTGRES_USER: z3r0
+      POSTGRES_PASSWORD: Nj@918r3t.
